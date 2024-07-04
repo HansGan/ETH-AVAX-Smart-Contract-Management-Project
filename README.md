@@ -1,6 +1,6 @@
-# Project Title
+# Function Frontend - ETH AVAX PROJECT
 
-Smart Contract Management Project
+Add or modify a function for smart contract management project with front-end functionality
 
 ## Description
 
