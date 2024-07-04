@@ -14,6 +14,7 @@ On the other hand, the index.js is responsible for the front-end allowing the us
       setUSD_Balance((await atm.getUSD_Balance()).toNumber())
     }
   }  ``
+
 To display the output the function this was added:
 ``<p>Your Balance in USD: $ {total} </p>``
 
