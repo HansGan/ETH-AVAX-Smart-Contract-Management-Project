@@ -35,12 +35,12 @@ Choose an IDE to run the code. In this case, I utilized Visual Studio Code as my
 After this, the project will be running on your localhost. 
 Typically at http://localhost:3000/
 
-NOTE:
-YOU MUST CREATE A METAMASK ACCOUNT AS IT REQUIRES YOU TO CONNECT TO ONE FOR DEMONSTRATION PURPOSES.
-
-If you face issues in connecting to your metamask account refer to the following video (Timestamp: 21:00): 
+If you face issues in connecting to your metamask account refer to the following video 
+(Timestamp: 21:00): 
 https://youtu.be/e_4-Q77XJkw
 
+NOTE:
+YOU MUST CREATE A METAMASK ACCOUNT AS IT REQUIRES YOU TO CONNECT TO ONE FOR DEMONSTRATION PURPOSES.
 
 ## Authors
 Hans Matthew N. Gan (hansmatthewniervagan@gmail.com)
