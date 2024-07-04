@@ -4,13 +4,22 @@ Smart Contract Management Project
 
 ## Description
 
-The project revolves around integrating a frontend design for a smart contract and connecting to a metamask account to perform simple functions such as withdraw and deposit of ETH. Functions such as getUSD_Balance() was added to this project to display the USD equivalent of the balance extracted by the getBalance() function
+The project revolves around integrating a frontend design for a smart contract and connecting to a metamask account to perform simple functions such as withdraw and deposit of ETH. Functions such as getUSD_Balance() was added to this project to display the USD equivalent of the balance extracted by the getBalance()function.
+
+The Assessment.sol file defines the smart contract, you'll find numerous functions here, the main interactive functions here that you can use is the deposit and withdraw. These functions, from the name itself allows you to deposit or withdraw ETH from your metamask. As a requirement for this project, an additional function was included in the contract and this is the getUSD_Balance() which is an informative function to allow the user to view the equivelent amount of balance he/she currently has to USD. At the time of this making, 1 ETH was equivalent to approximately 3383 USD. 
+
+On the other hand, the index.js is responsible for the front-end allowing the user to interact with the smart contract graphically. This was updated to compensate for the changes in the smart contract which is the addition of getUSD_Balance() function. To display its output this was implemented:
+``const getUSD_Balance = async() => {
+    if(atm){
+      setUSD_Balance((await atm.getUSD_Balance()).toNumber())
+    }
+  }  ``
 
 ## Getting Started
 
 ### Executing program
 
-After cloning the github, you will want to do the following to get the code running on your computer.
+Choose an IDE to run the code. In this case, I utilized Visual Studio Code as my IDE (You may download the IDE at https://code.visualstudio.com/Download). Clone this repository and you will want to do the following to get the code running on your computer. 
 
 1. Inside the project directory, in the terminal type: npm i
 2. Open two additional terminals in your VS code
