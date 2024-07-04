@@ -1,4 +1,4 @@
-# Function Frontend - ETH AVAX PROJECT
+# FUNCTION FRONTEND- ETH AVAX PROJECT
 
 Add or modify a function for smart contract management project with front-end functionality
 
