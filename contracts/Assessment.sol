@@ -24,6 +24,15 @@ contract Assessment {
         return total;
     }
 
+    function getTransactionTimestamp() public view returns (uint256) {
+        uint256 timestamp = block.timestamp;
+        return timestamp;
+    }
+
+    function getTransactionStatus(string memory status) public view returns (string memory){
+        return status;
+    }
+
     function deposit(uint256 _amount) public payable {
         uint _previousBalance = balance;
 
