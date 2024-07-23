@@ -26,9 +26,9 @@ Additionally, I also added a transaction list to keep track of all transaction m
       const timestamp = await atm.getTransactionTimestamp();
       return timestamp.toNumber();
     }
-  };
+  };``
 
-  const getTransactionStatus = async (status) => {
+  ``const getTransactionStatus = async (status) => {
     if (atm){
       return await atm.getTransactionStatus(status);
     }
