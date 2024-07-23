@@ -8,7 +8,9 @@ The project revolves around integrating a frontend design for a smart contract a
 
 The Assessment.sol file defines the smart contract, you'll find numerous functions here, the main interactive functions here that you can use is the deposit and withdraw. These functions, from the name itself allows you to deposit or withdraw ETH from your metamask. As a requirement for this project, an additional function was included in the contract and this is the getUSD_Balance() which is an informative function to allow the user to view the equivelent amount of balance he/she currently has to USD. At the time of this making, 1 ETH was equivalent to approximately 3383 USD. 
 
-On the other hand, the index.js is responsible for the front-end allowing the user to interact with the smart contract graphically. This was updated to compensate for the changes in the smart contract which is the addition of getUSD_Balance() function. To extract the data from the function this was implemented:
+On the other hand, the index.js is responsible for the front-end allowing the user to interact with the smart contract graphically. This was updated to compensate for the changes in the smart contract which is the addition of getUSD_Balance() function. 
+
+To extract the data from the function this was implemented:
 ``const getUSD_Balance = async() => {
     if(atm){
       setUSD_Balance((await atm.getUSD_Balance()).toNumber())
@@ -20,7 +22,10 @@ To display the output of the function this was added:
 
 For further details, check the source code from line 63 to 110
 
-Additionally, I also added a transaction list to keep track of all transaction made during a session. Two functions were made in the smart contract, the getTransactionTimestamp() and getTransactionStatus() functions which extracts the time and the status or type of transaction (withdrawal or deposit). To extract the data from the function this was implemented in the frontend:
+Additionally, I also added a transaction list to keep track of all transaction made during a session. Two functions were made in the smart contract, the getTransactionTimestamp() and getTransactionStatus() functions which extracts the time and the status or type of transaction (withdrawal or deposit). 
+
+To extract the data from the function this was implemented in the frontend:
+
 ``const getTransactionTimestamp = async () => {
     if (atm) {
       const timestamp = await atm.getTransactionTimestamp();
