@@ -15,11 +15,50 @@ On the other hand, the index.js is responsible for the front-end allowing the us
     }
   }  ``
 
-To display the output the function this was added:
+To display the output of the function this was added:
 ``<p>Your Balance in USD: $ {total} </p>``
 
 For further details, check the source code from line 63 to 110
 
+Additionally, I also added a transaction list to keep track of all transaction made during a session. Two functions were made in the smart contract, the getTransactionTimestamp() and getTransactionStatus() functions which extracts the time and the status or type of transaction (withdrawal or deposit). To extract the data from the function this was implemented in the frontend:
+``const getTransactionTimestamp = async () => {
+    if (atm) {
+      const timestamp = await atm.getTransactionTimestamp();
+      return timestamp.toNumber();
+    }
+  };
+
+  const getTransactionStatus = async (status) => {
+    if (atm){
+      return await atm.getTransactionStatus(status);
+    }
+  };``
+  
+To display the output of the function this was added:
+
+``<h3>TRANSACTION HISTORY</h3>
+        <div style={{width:"100%", display:"flex", justifyContent:"center"}}>
+          <table style={{ textAlign: "center", width:"500px"}}>
+            <thead>
+              <tr>
+                <th>Amount</th>
+                <th>Timestamp</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transactionHistory.map((transaction, index) => (
+                <tr key={index}>
+                  <td>1</td>
+                  <td>{new Date(transaction.timestamp * 1000).toLocaleString()}</td>
+                  <td>{transaction.status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>``
+
+For further details, check the source code from line 68 to 158
 ## Getting Started
 
 ### Executing program
